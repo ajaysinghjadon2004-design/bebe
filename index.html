@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Forever Yours 💕 | Best Valentine Gift Ever</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600;700&family=Nunito:wght@300;400;600;700;800&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --cream: #FFF5F5;
+            --light-pink: #FFE5EC;
+            --rose: #FF69B4;
+            --deep-rose: #E91E63;
+            --gold: #FFD700;
+            --dark: #2A2A2A;
+            --white: #FFFFFF;
+            --shadow: rgba(255, 105, 180, 0.3);
+            --purple: #9C27B0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #FFF0F5 0%, #FFE5EC 100%);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        .click-heart {
+            position: fixed;
+            font-size: 30px;
+            pointer-events: none;
+            z-index: 999999;
+            animation: heartFloat 1.5s ease-out forwards;
+        }
+
+        @keyframes heartFloat {
+            0% {
+                transform: translateY(0) scale(1) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-150px) scale(1.8) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--light-pink);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--rose), var(--deep-rose));
+            border-radius: 10px;
+        }
+
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .heart-float {
+            position: absolute;
+            font-size: 20px;
+            opacity: 0.4;
+            animation: floatUp 12s infinite ease-in-out;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.4;
+            }
+
+            90% {
+                opacity: 0.4;
+            }
+
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .lock-screen {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 240, 245, 0.98), rgba(255, 229, 236, 0.98));
+            backdrop-filter: blur(30px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100000;
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .lock-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0.8);
+        }
+
+        .lock-box {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(40px);
+            padding: 35px 25px 30px;
+            border-radius: 30px;
+            box-shadow: 0 25px 80px var(--shadow);
+            border: 2px solid rgba(255, 182, 193, 0.4);
+            max-width: 380px;
+            width: 90%;
+            text-align: center;
+            animation: lockBounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        @keyframes lockBounce {
+            0% {
+                opacity: 0;
+                transform: scale(0.3) translateY(-100px);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .lock-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 18px;
+            background: linear-gradient(135deg, var(--rose), var(--deep-rose));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .lock-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: var(--rose);
+            margin-bottom: 8px;
+        }
+
+        .lock-subtitle {
+            font-size: 0.7rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        .demo-hint {
+            background: linear-gradient(135deg, #FFF9E6, #FFECB3);
+            border: 2px solid var(--gold);
+            padding: 8px 12px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-size: 0.8rem;
+            color: #D97706;
+        }
+
+        .demo-hint strong {
+            color: #B45309;
+            font-weight: 800;
+        }
+
+        .password-display {
+            background: linear-gradient(135deg, rgba(255, 182, 193, 0.15), rgba(255, 218, 224, 0.15));
+            border: 3px solid rgba(255, 105, 180, 0.25);
+            border-radius: 15px;
+            padding: 16px;
+            margin-bottom: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.6rem;
+            letter-spacing: 8px;
+            color: var(--rose);
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .placeholder-text {
+            opacity: 0.3;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .key-btn {
+            width: 100%;
+            aspect-ratio: 1;
+            max-width: 65px;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 182, 193, 0.4);
+            background: white;
+            color: var(--dark);
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .key-btn:active {
+            transform: scale(0.9);
+        }
+
+        .unlock-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--rose), var(--deep-rose));
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 1rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px var(--shadow);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .unlock-btn:active {
+            transform: translateY(2px);
+        }
+
+        .unlock-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .main-content {
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 1.2s ease-out;
+        }
+
+        .main-content.visible {
+            opacity: 1;
+        }
+
+        .music-player {
+            position: fixed;
+            bottom: 18px;
+            left: 18px;
+            z-index: 9999;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 10px 18px;
+            border-radius: 50px;
+            box-shadow: 0 8px 32px var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid var(--light-pink);
+        }
+
+        .music-player:active {
+            transform: scale(0.95);
+        }
+
+        .play-btn {
+            width: 26px;
+            height: 26px;
+            background: var(--rose);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 11px;
+        }
+
+        .music-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .music-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .music-status {
+            font-size: 0.65rem;
+            color: #999;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(255, 240, 245, 0.8), rgba(255, 229, 236, 0.8));
+        }
+
+        .hero-badge {
+            font-size: 0.8rem;
+            color: var(--rose);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+            font-weight: 700;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3rem, 15vw, 6.5rem);
+            background: linear-gradient(135deg, var(--rose), var(--deep-rose), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 18px;
+            animation: scaleIn 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s backwards;
+            line-height: 1.2;
+        }
+
+        .hero-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.1rem, 4vw, 1.7rem);
+            color: var(--dark);
+            font-style: italic;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+        }
+
+        .shower-btn {
+            padding: 14px 35px;
+            background: white;
+            border: 3px solid var(--rose);
+            border-radius: 50px;
+            color: var(--rose);
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            animation: fadeInUp 1s ease-out 0.9s backwards;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .shower-btn:active {
+            transform: scale(0.95);
+        }
+
+        .love-counter {
+            margin-top: 30px;
+            padding: 22px 30px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 2px solid rgba(255, 182, 193, 0.3);
+            animation: fadeInUp 1s ease-out 1.2s backwards;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .counter-label {
+            font-size: 0.75rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .counter-time {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--rose);
+            letter-spacing: 2px;
+        }
+
+        .why-love-section,
+        .future-plans-section {
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #FFE5EC, #FFF0F5);
+        }
+
+        .future-plans-section {
+            background: linear-gradient(135deg, #E1BEE7, #F3E5F5);
+        }
+
+        .reasons-grid,
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .reason-card,
+        .plan-card {
+            background: white;
+            padding: 30px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(255, 105, 180, 0.15);
+            border: 2px solid var(--light-pink);
+            transition: all 0.4s;
+            text-align: center;
+        }
+
+        .plan-card {
+            border-color: #E1BEE7;
+            box-shadow: 0 10px 40px rgba(156, 39, 176, 0.15);
+        }
+
+        .reason-card:active,
+        .plan-card:active {
+            transform: scale(0.98);
+        }
+
+        .reason-emoji,
+        .plan-emoji {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .reason-title,
+        .plan-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--rose);
+            margin-bottom: 12px;
+        }
+
+        .plan-title {
+            color: var(--purple);
+        }
+
+        .reason-text,
+        .plan-text {
+            color: #666;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .timeline-section,
+        .love-notes-section,
+        .letters-section {
+            padding: 70px 20px;
+            background: white;
+        }
+
+        .section-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.3rem, 10vw, 4.2rem);
+            text-align: center;
+            color: var(--rose);
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #999;
+            font-style: italic;
+            margin-bottom: 50px;
+            font-size: 1.05rem;
+        }
+
+        .timeline {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            margin-bottom: 35px;
+        }
+
+        .timeline-card {
+            background: white;
+            padding: 22px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(255, 105, 180, 0.15);
+            border: 2px solid var(--light-pink);
+            transition: all 0.4s;
+        }
+
+        .timeline-card:active {
+            transform: scale(0.98);
+        }
+
+        .timeline-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .timeline-emoji {
+            font-size: 2.3rem;
+        }
+
+        .timeline-meta {
+            flex: 1;
+        }
+
+        .timeline-date {
+            font-size: 0.8rem;
+            color: var(--rose);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .timeline-desc {
+            color: #666;
+            line-height: 1.7;
+            font-size: 0.9rem;
+        }
+
+        .gallery-section {
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #FFF0F5, #FFE5EC);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-card {
+            position: relative;
+            background: white;
+            padding: 12px;
+            border-radius: 20px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s;
+            transform: rotate(0deg);
+        }
+
+        .gallery-card:nth-child(odd) {
+            transform: rotate(-2deg);
+        }
+
+        .gallery-card:nth-child(even) {
+            transform: rotate(2deg);
+        }
+
+        .gallery-card:active {
+            transform: rotate(0deg) scale(0.95) !important;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.6s;
+        }
+
+        .gallery-caption {
+            text-align: center;
+            padding: 12px 10px 5px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .notes-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .love-note {
+            background: linear-gradient(135deg, #FFF9E6, #FFECB3);
+            padding: 30px 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--gold);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .note-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: var(--dark);
+            font-style: italic;
+        }
+
+        .letters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 22px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .letter-card {
+            background: white;
+            padding: 30px 22px;
+            border-radius: 18px;
+            text-align: center;
+            border: 3px dashed var(--rose);
+            cursor: pointer;
+            transition: all 0.4s;
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.12);
+        }
+
+        .letter-card:active {
+            transform: scale(0.95);
+        }
+
+        .letter-to {
+            font-size: 0.7rem;
+            color: #999;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .letter-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            color: var(--rose);
+            margin-bottom: 15px;
+        }
+
+        .letter-btn {
+            padding: 10px 22px;
+            background: var(--rose);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .letter-btn:active {
+            transform: scale(0.95);
+        }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 25px;
+            max-width: 550px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            transform: scale(0.8);
+            transition: transform 0.3s;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: var(--rose);
+            line-height: 1;
+            font-weight: 300;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .modal-close:active {
+            background: var(--light-pink);
+            transform: scale(0.9);
+        }
+
+        .modal-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            color: var(--rose);
+            margin-bottom: 20px;
+            padding-right: 40px;
+        }
+
+        .modal-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--dark);
+            white-space: pre-line;
+        }
+
+        .quiz-section {
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #FFE5EC, #FFF0F5);
+        }
+
+        .quiz-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 35px 22px;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(255, 105, 180, 0.2);
+        }
+
+        .quiz-question {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+
+        .quiz-options {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .quiz-option {
+            padding: 16px;
+            background: white;
+            border: 3px solid var(--rose);
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .quiz-option:active {
+            transform: scale(0.98);
+        }
+
+        .quiz-result {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .result-gif {
+            width: 100%;
+            max-width: 280px;
+            height: 280px;
+            border-radius: 20px;
+            margin: 0 auto 18px;
+            border: none;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .result-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 12px;
+        }
+
+        .proposal-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 20px;
+        }
+
+        .proposal-section:nth-of-type(odd) {
+            background: linear-gradient(135deg, #FFE5EC, #FFF0F5);
+        }
+
+        .proposal-section:nth-of-type(even) {
+            background: linear-gradient(135deg, #FFB6D9, #FFD6E8);
+        }
+
+        .proposal-box {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(30px);
+            padding: 45px 28px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 25px 80px rgba(255, 105, 180, 0.35);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .proposal-question {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            color: var(--deep-rose);
+            margin-bottom: 35px;
+            line-height: 1.3;
+        }
+
+        .proposal-buttons {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .proposal-btn {
+            padding: 18px 45px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.4s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-yes {
+            background: linear-gradient(135deg, var(--rose), var(--deep-rose));
+            color: white;
+        }
+
+        .btn-yes:active {
+            transform: scale(0.95) rotate(5deg);
+        }
+
+        .btn-no {
+            background: white;
+            color: var(--dark);
+            border: 3px solid #ddd;
+        }
+
+        .btn-no:active {
+            transform: scale(0.9);
+        }
+
+        .reaction-box {
+            margin-top: 35px;
+            min-height: 350px;
+        }
+
+        .reaction-gif {
+            width: 100%;
+            max-width: 320px;
+            height: 320px;
+            border-radius: 25px;
+            margin: 0 auto 18px;
+            border: none;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .reaction-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 18px;
+            color: var(--dark);
+        }
+
+        .rain-drop {
+            position: fixed;
+            width: 2px;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, rgba(100, 149, 237, 0.8));
+            pointer-events: none;
+            z-index: 9998;
+            animation: rainFall linear;
+        }
+
+        @keyframes rainFall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        .firework {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9997;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .lock-box {
+                padding: 28px 20px 25px;
+            }
+
+            .key-btn {
+                max-width: 60px;
+                font-size: 1.25rem;
+            }
+
+            .proposal-btn {
+                padding: 15px 32px;
+                font-size: 1.1rem;
+            }
+
+            .music-player {
+                bottom: 15px;
+                left: 15px;
+                padding: 9px 15px;
+            }
+
+            .quiz-container {
+                padding: 28px 18px;
+            }
+
+            .modal-content {
+                padding: 30px 20px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .letters-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .result-gif,
+            .reaction-gif {
+                height: 260px;
+            }
+
+            .reasons-grid,
+            .plans-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .password-display {
+                font-size: 1.4rem;
+                letter-spacing: 6px;
+            }
+
+            .shower-btn {
+                padding: 12px 28px;
+                font-size: 0.95rem;
+            }
+
+            .modal-title {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+
+        function App() {
+            const [isLocked, setIsLocked] = useState(true);
+            const [password, setPassword] = useState('');
+            const [showContent, setShowContent] = useState(false);
+
+            useEffect(() => {
+                const handleClick = (e) => {
+                    if (!showContent) return;
+
+                    const hearts = ['❤️', '💕', '💖', '💗', '💓', '💝', '💞', '💘'];
+                    const heart = document.createElement('div');
+                    heart.className = 'click-heart';
+                    heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                    heart.style.left = e.pageX + 'px';
+                    heart.style.top = e.pageY + 'px';
+                    document.body.appendChild(heart);
+
+                    setTimeout(() => heart.remove(), 1500);
+                };
+
+                document.addEventListener('click', handleClick);
+                return () => document.removeEventListener('click', handleClick);
+            }, [showContent]);
+
+            useEffect(() => {
+                if (!isLocked && typeof AOS !== 'undefined') {
+                    setTimeout(() => {
+                        AOS.init({
+                            duration: 800,
+                            once: false,
+                            offset: 50,
+                            easing: 'ease-out-cubic'
+                        });
+                    }, 100);
+                }
+            }, [isLocked]);
+
+            const handleUnlock = () => {
+                if (password === '23032025') {
+                    setIsLocked(false);
+                    setTimeout(() => setShowContent(true), 600);
+                } else {
+                    alert('Wrong password! 💔 Try the date we first become friend in any where');
+                    setPassword('');
+                }
+            };
+
+            return (
+                <>
+                    <FloatingHearts />
+
+                    {isLocked && (
+                        <LockScreen
+                            password={password}
+                            setPassword={setPassword}
+                            onUnlock={handleUnlock}
+                        />
+                    )}
+
+                    <div className={`main-content ${showContent ? 'visible' : ''}`}>
+                        <MusicPlayer />
+                        <HeroSection />
+                        <WhyLoveSection />
+                        <TimelineSection />
+                        <GallerySection />
+                        <LoveNotesSection />
+                        <FuturePlansSection />
+                        <LettersSection />
+                        <QuizSection />
+                        <ProposalSection number={1} />
+                        <ProposalSection number={2} />
+                    </div>
+                </>
+            );
+        }
+
+        function FloatingHearts() {
+            useEffect(() => {
+                const container = document.querySelector('.floating-hearts');
+                const createHeart = () => {
+                    const heart = document.createElement('div');
+                    heart.className = 'heart-float';
+                    heart.innerHTML = '❤️';
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.animationDuration = (Math.random() * 8 + 10) + 's';
+                    heart.style.animationDelay = Math.random() * 5 + 's';
+                    container?.appendChild(heart);
+
+                    setTimeout(() => heart.remove(), 18000);
+                };
+
+                for (let i = 0; i < 12; i++) {
+                    setTimeout(createHeart, i * 1000);
+                }
+
+                const interval = setInterval(createHeart, 2500);
+                return () => clearInterval(interval);
+            }, []);
+
+            return <div className="floating-hearts"></div>;
+        }
+
+        function LockScreen({ password, setPassword, onUnlock }) {
+            const handleKeyPress = (num) => {
+                if (password.length < 8) {
+                    setPassword(password + num);
+                }
+            };
+
+            const handleDelete = () => {
+                setPassword(password.slice(0, -1));
+            };
+
+            const handleKeyDown = (e) => {
+                if (e.key === 'Enter' && password.length === 8) {
+                    onUnlock();
+                } else if (e.key === 'Backspace') {
+                    handleDelete();
+                } else if (!isNaN(e.key)) {
+                    handleKeyPress(e.key);
+                }
+            };
+
+            useEffect(() => {
+                window.addEventListener('keydown', handleKeyDown);
+                return () => window.removeEventListener('keydown', handleKeyDown);
+            }, [password]);
+
+            return (
+                <div className="lock-screen">
+                    <div className="lock-box">
+                        <div className="lock-icon">🔒</div>
+                        <h1 className="lock-title">Love Vault</h1>
+                        <p className="lock-subtitle">Enter Secret Date</p>
+                        <div className="demo-hint">
+                            <strong>HINT:</strong> The day we First Become Friend ❤️
+                        </div>
+
+                        <div className="password-display">
+                            {password || <span className="placeholder-text">DDMMYYYY</span>}
+                        </div>
+
+                        <div className="keypad">
+                            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(num => (
+                                <button key={num} className="key-btn" onClick={() => handleKeyPress(num)}>
+                                    {num}
+                                </button>
+                            ))}
+                            <div></div>
+                            <button className="key-btn" onClick={() => handleKeyPress(0)}>0</button>
+                            <button
+                                className="key-btn"
+                                onClick={handleDelete}
+                                style={{ color: 'var(--rose)', fontSize: '1.5rem' }}
+                            >
+                                ⌫
+                            </button>
+                        </div>
+
+                        <button
+                            className="unlock-btn"
+                            onClick={onUnlock}
+                            disabled={password.length !== 8}
+                        >
+                            Unlock Gift 💝
+                        </button>
+                    </div>
+                </div>
+            );
+        }
+
+        function MusicPlayer() {
+            const [playing, setPlaying] = useState(false);
+            const audioRef = useRef(null);
+
+            const toggleMusic = () => {
+                if (playing) {
+                    audioRef.current?.pause();
+                } else {
+                    audioRef.current?.play();
+                }
+                setPlaying(!playing);
+            };
+
+            return (
+                <>
+                    <div className="music-player" onClick={toggleMusic}>
+                        <div className="play-btn">
+                            {playing ? '⏸' : '▶'}
+                        </div>
+                        <div className="music-info">
+                            <div className="music-title">Love Song</div>
+                            <div className="music-status">
+                                {playing ? 'Playing for you' : 'Tap to play'}
+                            </div>
+                        </div>
+                    </div>
+                    <audio ref={audioRef} loop>
+                        <source src="until.mp3" type="audio/mpeg" />
+                    </audio>
+                </>
+            );
+        }
+
+        function HeroSection() {
+            const [days, setDays] = useState(0);
+            const [hours, setHours] = useState(0);
+            const [minutes, setMinutes] = useState(0);
+            const [seconds, setSeconds] = useState(0);
+
+            useEffect(() => {
+                const startDate = new Date('2025-06-28');
+                const updateCounter = () => {
+                    const now = new Date();
+                    const diff = now - startDate;
+
+                    setDays(Math.floor(diff / (1000 * 60 * 60 * 24)));
+                    setHours(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+                    setMinutes(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)));
+                    setSeconds(Math.floor((diff % (1000 * 60)) / 1000));
+                };
+
+                updateCounter();
+                const interval = setInterval(updateCounter, 1000);
+                return () => clearInterval(interval);
+            }, []);
+
+            const createHeartShower = () => {
+                for (let i = 0; i < 60; i++) {
+                    setTimeout(() => {
+                        const heart = document.createElement('div');
+                        heart.innerHTML = '❤️';
+                        heart.style.position = 'fixed';
+                        heart.style.left = Math.random() * 100 + '%';
+                        heart.style.top = '-50px';
+                        heart.style.fontSize = (Math.random() * 35 + 25) + 'px';
+                        heart.style.animation = 'floatUp 3s ease-out forwards';
+                        heart.style.zIndex = '10000';
+                        document.body.appendChild(heart);
+
+                        setTimeout(() => heart.remove(), 3000);
+                    }, i * 80);
+                }
+            };
+
+            return (
+                <section className="hero">
+                    <div className="hero-badge">✨ Happy Valentine's Day ✨</div>
+                    <h1 className="hero-name">BEBO</h1>
+                    <p className="hero-tagline">"My heart beats only for you." 💕</p>
+
+                    <button className="shower-btn" onClick={createHeartShower}>
+                        ❤️ Shower me with Love
+                    </button>
+
+                    <div className="love-counter">
+                        <div className="counter-label">We've been in love for ⏰</div>
+                        <div className="counter-time">
+                            {days}d {hours}h {minutes}m {seconds}s
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        function WhyLoveSection() {
+            const reasons = [
+                {
+                    emoji: "😊",
+                    title: "Your Beautiful Smile",
+                    text: "Your smile lights up my entire world and makes every day brighter. It's the first thing I think about when I wake up! ✨"
+                },
+                {
+                    emoji: "💝",
+                    title: "Your Kind Heart",
+                    text: "You have the most caring and compassionate heart. The way you treat everyone with kindness inspires me every single day! 🌟"
+                },
+                {
+                    emoji: "🌹",
+                    title: "Your Inner Beauty",
+                    text: "You're beautiful inside and out. Your soul shines through everything you do, making you absolutely perfect in my eyes! 💖"
+                },
+                {
+                    emoji: "😂",
+                    title: "Your Laughter",
+                    text: "The sound of your laughter is my favorite melody. It fills my heart with pure joy and makes all my worries disappear! 🎵"
+                },
+                {
+                    emoji: "🤗",
+                    title: "Your Support",
+                    text: "You believe in me even when I don't believe in myself. Your support gives me strength to chase my dreams! 💪"
+                },
+                {
+                    emoji: "✨",
+                    title: "Everything About You",
+                    text: "From your quirks to your dreams, I love every single thing about you. You're my perfect person in every way! 💕"
+                }
+            ];
+
+            return (
+                <section className="why-love-section">
+                    <h2 className="section-title" data-aos="fade-up">Why I Love You 💖</h2>
+                    <p className="section-subtitle" data-aos="fade-up">
+                        Let me count the ways... 🌹
+                    </p>
+
+                    <div className="reasons-grid">
+                        {reasons.map((reason, index) => (
+                            <div
+                                key={index}
+                                className="reason-card"
+                                data-aos="fade-up"
+                                data-aos-delay={index * 100}
+                            >
+                                <span className="reason-emoji">{reason.emoji}</span>
+                                <h3 className="reason-title">{reason.title}</h3>
+                                <p className="reason-text">{reason.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            );
+        }
+
+        function TimelineSection() {
+            const timeline = [
+                {
+                    date: "28 Feb 2025",
+                    emoji: "💫",
+                    title: "✨ First Time Metting you",
+                    desc: "The moment I first meet you, i never thought i going to love anyone but you made me that love is not in your control if you  love someone you even don't know that you  haev feeling for her ! 🌟"
+                },
+                {
+                    date: "best MOMENT",
+                    emoji: "📞",
+                    title: "🙏FIRST CALL WITH YOU ",
+                    desc: "when we first had call  on instgram at time as much i know i dont have bettry in my phn so i tell you if we want to talk let talk on instgram and  you say okay i think that was a turning point for our relationship✨"
+                },
+                {
+                    date: "perpose Day",
+                    emoji: "✨",
+                    title: "💕 best desicion of my life",
+                    desc: "at the time i perpose you  i never belive that you  will  say yes but that was best moment for me and i never going to  regret that that is my best desicion it  make me smile how we meet and noe you are my girlfrind bby my everything and always going to be "
+                },
+                {
+                    date: "first time meet you",
+                    emoji: "💑",
+                    title: "🤗 when i first see you",
+                    desc: "The moment I first meet you, my world changed forever im smiling a think how cute she is how sweet she is i never forget that . Your smile lit up everything around me, and I knew you were special!! 💕"
+                },
+                {
+                    date: "27-1-2026",
+                    emoji: "🛕",
+                    title: "🌺 going to  shayam ji ",
+                    desc: "Walking beside you in the peaceful temple, Seeking blessings together Every moment felt blessed and filled with divine love  I realized you're the answer to all my prayers. You're my blessing, my miracle, my everything! 💕"
+                },
+                {
+                    date: "Forever",
+                    emoji: "💖",
+                    title: "🌟 Our Future Together",
+                    desc: "I dream of spending every sunrise and sunset with you. You're my present, my future, my always and forever! 💕"
+                }
+            ];
+
+            return (
+                <section className="timeline-section">
+                    <h2 className="section-title" data-aos="fade-up">Our Beautiful Journey 🌹</h2>
+                    <p className="section-subtitle" data-aos="fade-up">Every moment with you is a treasure... 💎</p>
+
+                    <div className="timeline">
+                        {timeline.map((item, index) => (
+                            <div
+                                key={index}
+                                className="timeline-item"
+                                data-aos="fade-up"
+                                data-aos-delay={index * 100}
+                            >
+                                <div className="timeline-card">
+                                    <div className="timeline-header">
+                                        <div className="timeline-emoji">{item.emoji}</div>
+                                        <div className="timeline-meta">
+                                            <div className="timeline-date">{item.date}</div>
+                                            <h3 className="timeline-title">{item.title}</h3>
+                                        </div>
+                                    </div>
+                                    <p className="timeline-desc">{item.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            );
+        }
+
+        function GallerySection() {
+            const photos = [
+                { src: 'rose.jpeg', caption: 'Our Beautiful Memory ✨' },
+                { src: 'black.jpeg', caption: 'Perfect Moments 💖' },
+                { src: 'shyamjimndir.jpeg', caption: 'Together Forever 💕' },
+                { src: 'shyamji.jpeg', caption: 'Love & Laughter 🌹' },
+                { src: 'kiss.jpeg', caption: 'good times💖' },
+                { src: 'jalmahal.jpeg', caption: 'visting place with  you  💖' }
+                
+            ];
+
+            return (
+                <section className="gallery-section">
+                    <h2 className="section-title" data-aos="fade-up">Captured Moments 📸</h2>
+                    <p className="section-subtitle" data-aos="fade-up">
+                        Every picture tells our story... 💕
+                    </p>
+
+                    <div className="gallery-grid">
+                        {photos.map((photo, index) => (
+                            <div
+                                key={index}
+                                className="gallery-card"
+                                data-aos="zoom-in"
+                                data-aos-delay={index * 100}
+                            >
+                                <img src={photo.src} alt={photo.caption} />
+                                <p className="gallery-caption">{photo.caption}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            );
+        }
+
+        function LoveNotesSection() {
+            const notes = [
+                "You are my sunshine on cloudy days, my rainbow after the storm! 🌈",
+                "Every love song reminds me of you because you're my favorite melody! 🎵",
+                "I fall in love with you more and more every single day! 💕",
+                "You're not just my love, you're my best friend and my everything! ✨",
+                "With you, I've found my forever home in your heart! 🏡"
+            ];
+
+            return (
+                <section className="love-notes-section">
+                    <h2 className="section-title" data-aos="fade-up">Love Notes 💌</h2>
+                    <p className="section-subtitle" data-aos="fade-up">
+                        Little reminders of my love... 💝
+                    </p>
+
+                    <div className="notes-container">
+                        {notes.map((note, index) => (
+                            <div
+                                key={index}
+                                className="love-note"
+                                data-aos="fade-right"
+                                data-aos-delay={index * 100}
+                            >
+                                <p className="note-text">{note}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            );
+        }
+
+        function FuturePlansSection() {
+            const plans = [
+                {
+                    emoji: "🏠",
+                    title: "Our Dream Home",
+                    text: "Building a beautiful home filled with love, laughter, and countless memories together! 💕"
+                },
+                {
+                    emoji: "✈️",
+                    title: "Travel The World",
+                    text: "Exploring every corner of the world hand in hand, creating adventures and stories we'll cherish forever! 🌍"
+                },
+                {
+                    emoji: "👨‍👩‍👧‍👦",
+                    title: "Beautiful Family",
+                    text: "Creating our own little family, filled with love, giggles, and unconditional happiness! 💖"
+                },
+                {
+                    emoji: "🌅",
+                    title: "Grow Old Together",
+                    text: "Watching sunrises and sunsets together, holding hands even when we're old and gray! 💑"
+                },
+                {
+                    emoji: "💍",
+                    title: "Forever Together",
+                    text: "Promising to love, cherish, and support each other through every season of life! ✨"
+                },
+                {
+                    emoji: "🌟",
+                    title: "Chase Our Dreams",
+                    text: "Supporting each other's dreams and celebrating every success together as a team! 🎉"
+                }
+            ];
+
+            return (
+                <section className="future-plans-section">
+                    <h2 className="section-title" data-aos="fade-up">Our Future Together 🌟</h2>
+                    <p className="section-subtitle" data-aos="fade-up">
+                        Everything I dream about... 💭
+                    </p>
+
+                    <div className="plans-grid">
+                        {plans.map((plan, index) => (
+                            <div
+                                key={index}
+                                className="plan-card"
+                                data-aos="fade-up"
+                                data-aos-delay={index * 100}
+                            >
+                                <span className="plan-emoji">{plan.emoji}</span>
+                                <h3 className="plan-title">{plan.title}</h3>
+                                <p className="plan-text">{plan.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            );
+        }
+
+        function LettersSection() {
+            const [activeModal, setActiveModal] = useState(null);
+
+            const letters = [
+                {
+                    title: "You Miss Me 💭",
+                    content: "My darling,\n\nWhenever you miss me, just close your eyes and feel my love surrounding you. Remember all our beautiful moments together - our laughter, our conversations, our dreams! 💕\n\nDistance means nothing when someone means everything. I'm always thinking of you, always loving you, always yours! ✨\n\nYou're in my heart, today and always! 💖"
+                },
+                {
+                    title: "You're Sad 😢",
+                    content: "My beautiful love,\n\nI wish I could take away all your pain and sadness. Please remember that tough times don't last, but our love does! 💪\n\nYou are stronger than you know, braver than you believe, and more loved than you can imagine. I'm always here for you, through every storm! 🌈\n\nAfter every dark night comes a beautiful sunrise. Keep your chin up, my love. Better days are coming! ✨"
+                },
+                {
+                    title: "You're Happy 😊",
+                    content: "My sunshine,\n\nSeeing you happy makes my entire world brighter! Your smile is the most beautiful thing I've ever seen, and your laughter is my favorite sound! 🎵\n\nYou deserve all the happiness in the world and so much more. Keep shining bright, keep smiling that gorgeous smile, and keep being the amazing person you are! ✨\n\nYour happiness is my happiness. I love you! 💕"
+                },
+                {
+                    title: "You Can't Sleep 🌙",
+                    content: "My sweet angel,\n\nClose your eyes and imagine I'm there with you, holding you close and keeping you safe. Feel my arms around you, protecting you from all worries! 🤗\n\nCount my 'I love you's instead of sheep:\nI love you - 1 💕\nI love you - 2 💖\nI love you - 3 💗\n\nSweet dreams, my love. Tomorrow is a new day full of possibilities. Sleep tight! 🌟"
+                }
+            ];
+
+            return (
+                <>
+                    <section className="letters-section">
+                        <h2 className="section-title" data-aos="fade-up">Open When... 💌</h2>
+                        <p className="section-subtitle" data-aos="fade-up">
+                            Little reminders of my love for every mood 💝
+                        </p>
+
+                        <div className="letters-grid">
+                            {letters.map((letter, index) => (
+                                <div
+                                    key={index}
+                                    className="letter-card"
+                                    data-aos="flip-up"
+                                    data-aos-delay={index * 100}
+                                    onClick={() => setActiveModal(letter)}
+                                >
+                                    <div className="letter-to">To: My Love 💕</div>
+                                    <div className="letter-title">{letter.title}</div>
+                                    <button className="letter-btn">OPEN WHEN</button>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    <div
+                        className={`modal-overlay ${activeModal ? 'active' : ''}`}
+                        onClick={() => setActiveModal(null)}
+                    >
+                        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                            <span className="modal-close" onClick={() => setActiveModal(null)}>×</span>
+                            {activeModal && (
+                                <>
+                                    <h2 className="modal-title">Open When: {activeModal.title}</h2>
+                                    <p className="modal-text">{activeModal.content}</p>
+                                </>
+                            )}
+                        </div>
+                    </div>
+                </>
+            );
+        }
+
+        function QuizSection() {
+            const [answered, setAnswered] = useState(false);
+            const [isCorrect, setIsCorrect] = useState(false);
+
+            const handleAnswer = (correct) => {
+                setAnswered(true);
+                setIsCorrect(correct);
+
+                if (correct) {
+                    for (let i = 0; i < 40; i++) {
+                        setTimeout(() => {
+                            const heart = document.createElement('div');
+                            heart.innerHTML = '❤️';
+                            heart.style.position = 'fixed';
+                            heart.style.left = Math.random() * 100 + '%';
+                            heart.style.bottom = '-50px';
+                            heart.style.fontSize = (Math.random() * 35 + 25) + 'px';
+                            heart.style.animation = 'floatUp 4s ease-out forwards';
+                            heart.style.zIndex = '10000';
+                            document.body.appendChild(heart);
+
+                            setTimeout(() => heart.remove(), 4000);
+                        }, i * 80);
+                    }
+                }
+            };
+
+            return (
+                <section className="quiz-section">
+                    <h2 className="section-title" data-aos="fade-up">Love Quiz 💭</h2>
+                    <p className="section-subtitle" data-aos="fade-up">
+                        How well do you know my heart? 💖
+                    </p>
+
+                    <div className="quiz-container" data-aos="zoom-in">
+                        <h3 className="quiz-question">
+                            What's my favorite thing about you? 🤔
+                        </h3>
+
+                        <div className="quiz-options">
+                            <div className="quiz-option" onClick={() => handleAnswer(false)}>
+                                Your cuteness 👨‍🍳
+                            </div>
+                            <div className="quiz-option" onClick={() => handleAnswer(true)}>
+                                Your beautiful smile that lights up my world ✨
+                            </div>
+                            <div className="quiz-option" onClick={() => handleAnswer(false)}>
+                                Your careness 😄
+                            </div>
+                        </div>
+
+                        {answered && (
+                            <div className="quiz-result">
+                                <iframe
+                                    src={isCorrect ?
+                                        "https://tenor.com/embed/13697198850853500144" :
+                                        "https://tenor.com/embed/564946691775133937"
+                                    }
+                                    className="result-gif"
+                                    frameBorder="0"
+                                    allowFullScreen
+                                />
+                                <p className="result-text" style={{ color: isCorrect ? 'var(--rose)' : '#666' }}>
+                                    {isCorrect ?
+                                        "🎉 Perfect! You know me so well! Your smile is my everything! 💕" :
+                                        "😢 Not quite! It's your beautiful smile - it makes my heart skip a beat! Try again? 💔"
+                                    }
+                                </p>
+                            </div>
+                        )}
+                    </div>
+                </section>
+            );
+        }
+
+        function ProposalSection({ number }) {
+            const [noCount, setNoCount] = useState(0);
+            const [yesClicked, setYesClicked] = useState(false);
+            const rainRef = useRef(null);
+            const soundCountRef = useRef(0);
+
+            const questions = [
+                "Will you be my Valentine forever? 🌹",
+                "Will you let me love you for all eternity? 💍"
+            ];
+
+            useEffect(() => {
+                return () => {
+                    if (rainRef.current) {
+                        clearInterval(rainRef.current);
+                    }
+                };
+            }, []);
+
+            const playSound = () => {
+                try {
+                    const sounds = [
+                        'https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3',
+                        'https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3',
+                        'https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3',
+                        'https://assets.mixkit.co/active_storage/sfx/2013/2013-preview.mp3'
+                    ];
+                    const audio = new Audio(sounds[soundCountRef.current % sounds.length]);
+                    audio.volume = 0.5;
+                    audio.play().catch(() => { });
+                    soundCountRef.current++;
+                } catch (e) { }
+            };
+
+            const handleYes = () => {
+                setYesClicked(true);
+                stopRain();
+                createFireworks();
+                playSound();
+
+                setTimeout(() => {
+                    alert('YES! I LOVE YOU SO MUCH! 💕 You\'ve made me the happiest person alive! 🎉✨');
+                }, 1500);
+            };
+
+            const handleNo = () => {
+                setNoCount(prev => prev + 1);
+
+                if (noCount >= 1) {
+                    startRain();
+                }
+            };
+
+            const startRain = () => {
+                if (rainRef.current) return;
+
+                rainRef.current = setInterval(() => {
+                    const drop = document.createElement('div');
+                    drop.className = 'rain-drop';
+                    drop.style.left = Math.random() * 100 + '%';
+                    drop.style.animationDuration = (Math.random() * 0.5 + 0.8) + 's';
+                    document.body.appendChild(drop);
+
+                    setTimeout(() => drop.remove(), 1500);
+                }, 30);
+            };
+
+            const stopRain = () => {
+                if (rainRef.current) {
+                    clearInterval(rainRef.current);
+                    rainRef.current = null;
+                }
+                document.querySelectorAll('.rain-drop').forEach(drop => drop.remove());
+            };
+
+            const createFireworks = () => {
+                for (let i = 0; i < 120; i++) {
+                    setTimeout(() => {
+                        const x = Math.random() * window.innerWidth;
+                        const y = Math.random() * window.innerHeight;
+
+                        for (let j = 0; j < 35; j++) {
+                            const firework = document.createElement('div');
+                            firework.className = 'firework';
+                            firework.style.left = x + 'px';
+                            firework.style.top = y + 'px';
+                            firework.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
+
+                            const angle = (j / 35) * Math.PI * 2;
+                            const velocity = 120 + Math.random() * 100;
+                            const tx = Math.cos(angle) * velocity;
+                            const ty = Math.sin(angle) * velocity;
+
+                            firework.style.transform = `translate(${tx}px, ${ty}px)`;
+                            firework.style.transition = 'all 1.2s ease-out';
+                            firework.style.opacity = '0';
+
+                            document.body.appendChild(firework);
+                            setTimeout(() => firework.remove(), 1200);
+                        }
+                    }, i * 50);
+                }
+            };
+
+            const getGifUrl = () => {
+                if (yesClicked) {
+                    return "https://tenor.com/embed/13697198850853500144";
+                }
+                if (noCount === 0) return null;
+                if (noCount === 1) {
+                    return "https://tenor.com/embed/2232603094824498482";
+                }
+                return "https://tenor.com/embed/564946691775133937";
+            };
+
+            const getReactionText = () => {
+                if (yesClicked) {
+                    return "🎉 YES! You said YES! I'm the luckiest person in the universe! 💕✨";
+                }
+                if (noCount === 0) return null;
+                if (noCount === 1) {
+                    return "😠 Really?! Are you absolutely sure about that? Please say yes! 💔";
+                }
+                return "😭💔 Please... I can't stop crying! My heart is breaking! Say yes please! 💔💧";
+            };
+
+            return (
+                <section className="proposal-section">
+                    <div className="proposal-box" data-aos="zoom-in">
+                        <h2 className="proposal-question">{questions[number - 1]}</h2>
+
+                        <div className="proposal-buttons">
+                            <button className="proposal-btn btn-yes" onClick={handleYes}>
+                                {number === 1 ? "Yes! 💕" : "Yes, Forever! 💍"}
+                            </button>
+                            <button className="proposal-btn btn-no" onClick={handleNo}>
+                                No {noCount > 0 && '😢'}
+                            </button>
+                        </div>
+
+                        <div className="reaction-box">
+                            {getGifUrl() && (
+                                <>
+                                    <iframe
+                                        src={getGifUrl()}
+                                        className="reaction-gif"
+                                        frameBorder="0"
+                                        allowFullScreen
+                                    />
+                                    <p className="reaction-text">{getReactionText()}</p>
+                                </>
+                            )}
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
